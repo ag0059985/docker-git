@@ -18,3 +18,10 @@ jobs:
   steps:
   - script: echo job1 - hello world custom
     displayName: asdfasdf
+- job: JOB3
+  dependsOn: 
+  - JOB1
+  - JOB2
+  steps:
+  - script: echo job1 - hello world custom
+    displayName: asdfasdf    
