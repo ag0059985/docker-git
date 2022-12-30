@@ -1,0 +1,23 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: build
+  jobs:
+  - job: FirstJob
+    steps:
+    - bash: echo build first job
+  - job: SecondJob
+    steps:
+    - bash: echo build second job
+- stage: qadeploy
+  jobs:
+  - job: FirstJobQA
+    steps:
+    - bash: echo build first job QA
+  - job: SecondJobQA
+    steps:
+    - bash: echo build second job QA
